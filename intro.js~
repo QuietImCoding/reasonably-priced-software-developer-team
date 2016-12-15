@@ -1,0 +1,7 @@
+var printme = function(event) {
+    console.log(this);
+};
+
+for (i in document.getElementsByTagName('li')) {
+    i.addEventListener("mouseover", printme);
+}
