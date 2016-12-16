@@ -44,3 +44,14 @@ for (i = 0; i < nodeList.length; i++) {
 // Makes listener for button
 var button = document.getElementById('pushit');
 button.addEventListener("click", addElement);
+
+var fibonacci = function(e) {
+    console.log(this);
+    var list = document.getElementById('fiblist');
+    var entry = document.createElement('li');
+    entry.innerHTML = list.getChildCount;
+    list.appendChild(entry);
+}
+
+var fib = document.getElementById('fib');
+fib.addEventListener("click", fibonacci);
