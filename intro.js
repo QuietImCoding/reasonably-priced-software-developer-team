@@ -45,13 +45,30 @@ for (i = 0; i < nodeList.length; i++) {
 var button = document.getElementById('pushit');
 button.addEventListener("click", addElement);
 
+var fibo = function(e) {
+    if (e==1 || e==0) return e;
+    return fibo(e-1) + fibo(e-2);
+};
+
+var fiboF = function(e) {
+    var a = 1;
+    var b = 1;
+    var c = 0;
+    for (i = 0; i < e; i++) {
+	a=b;
+	b=c;
+	c=a+b;
+    }
+    return c;
+};
+
 var fibonacci = function(e) {
-    console.log(this);
+    console.log(this)
     var list = document.getElementById('fiblist');
     var entry = document.createElement('li');
-    entry.innerHTML = list.getChildCount;
+    entry.innerHTML = fiboF(list.childElementCount + 1);
     list.appendChild(entry);
-}
+};
 
 var fib = document.getElementById('fib');
 fib.addEventListener("click", fibonacci);
